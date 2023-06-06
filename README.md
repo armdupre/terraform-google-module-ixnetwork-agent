@@ -1,1 +1,1 @@
-# terraform-google-module-ixnetwork-agent
+# module-ixnetwork-agent/google
