@@ -36,13 +36,13 @@ resource "google_compute_instance" "Instance" {
 		}
 	}
 	metadata = {
-		Owner = local.OwnerTag
-		Project = local.ProjectTag
+		Owner = local.UserEmailTag
+		Project = local.UserProjectTag
 		serial-port-enable = local.SerialPortEnable
 	}
 	tags = local.NetworkTargetTags
 	labels = {
-		owner = replace(replace(local.OwnerTag, ".", "-"), "@", "-")
-		project = lower(local.ProjectTag)
+		owner = replace(replace(local.UserEmailTag, ".", "-"), "@", "-")
+		project = lower(local.UserProjectTag)
 	}
 }
