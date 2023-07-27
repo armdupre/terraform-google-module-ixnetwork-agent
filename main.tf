@@ -1,10 +1,3 @@
-resource "google_compute_address" "Eth0PublicIpAddress" {
-	name = local.Eth0PublicIpAddressName
-	region = local.RegionName
-	network_tier = "PREMIUM"
-	address_type = "EXTERNAL"
-}
-
 resource "google_compute_instance" "Instance" {
 	name = local.InstanceName
 	zone = local.ZoneName
@@ -45,4 +38,11 @@ resource "google_compute_instance" "Instance" {
 		owner = replace(replace(local.UserEmailTag, ".", "-"), "@", "-")
 		project = lower(local.UserProjectTag)
 	}
+}
+
+resource "google_compute_address" "Eth0PublicIpAddress" {
+	name = local.Eth0PublicIpAddressName
+	region = local.RegionName
+	network_tier = "PREMIUM"
+	address_type = "EXTERNAL"
 }

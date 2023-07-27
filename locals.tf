@@ -1,5 +1,4 @@
 locals {
-	AppName = var.AppName
 	CustomImageProjectId = var.CustomImageProjectId
 	CustomImageFamilyName = var.CustomImageFamilyName
 	Eth0PrivateIpAddress = var.Eth0PrivateIpAddress
@@ -13,14 +12,14 @@ locals {
 	InstanceId = var.InstanceId
 	InstanceName = "${local.Preamble}-instance"
 	MachineType = var.MachineType
-	NetworkTargetTags = [
-		"${local.AppName}-agent"
-	]
-	Preamble = "${local.UserLoginTag}-${local.UserProjectTag}-${local.AppName}-${local.InstanceId}"
-	SerialPortEnable = true
+	NetworkTargetTags = var.NetworkTargetTags
+	Preamble = "${local.UserLoginTag}-${local.UserProjectTag}-${local.Tag}-${local.Version}-${local.InstanceId}"
 	RegionName = var.RegionName
+	SerialPortEnable = true
+	Tag = var.Tag
 	UserEmailTag = var.UserEmailTag
 	UserLoginTag = var.UserLoginTag
 	UserProjectTag = var.UserProjectTag
+	Version = var.Version
 	ZoneName = var.ZoneName
 }
