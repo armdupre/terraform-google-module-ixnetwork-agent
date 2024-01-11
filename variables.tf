@@ -1,5 +1,5 @@
 variable "CustomImageFamilyName" {
-	default = "ixia-virtual-test-appliance-9-36-0-74"
+	default = "ixia-virtual-test-appliance-10-00-0-140"
 	description = "Group of images to which image belongs"
 	type = string
 }
@@ -108,7 +108,7 @@ variable "UserProjectTag" {
 }
 
 variable "Version" {
-	default = "9-36"
+	default = "10-00"
 	description = "Versioning of the application using the deployment"
 	type = string
 }
