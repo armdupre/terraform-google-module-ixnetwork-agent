@@ -9,7 +9,7 @@ This module creates a single instance having two network interfaces.
 ## Usage
 ```tf
 module "Agent" {
-	source  = "armdupre/module-ixnetwork-agent/google"
+	source = "git::https://github.com/armdupre/terraform-google-module-ixnetwork-agent.git"
 	Eth0SubnetName = module.Vpc.PublicSubnet.name
 	Eth0VpcNetworkName = module.Vpc.PublicVpcNetwork.name
 	Eth1SubnetName = module.Vpc.PrivateSubnet.name

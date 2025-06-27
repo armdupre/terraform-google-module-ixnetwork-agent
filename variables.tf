@@ -1,15 +1,3 @@
-variable "CustomImageFamilyName" {
-	default = "ixia-virtual-test-appliance-10-40-0-75"
-	description = "Group of images to which image belongs"
-	type = string
-}
-
-variable "CustomImageProjectId" {
-	default = "ixvm-261016"
-	description = "Globally unique identifier for image source project"
-	type = string
-}
-
 variable "Eth0PrivateIpAddress" {
 	default = "10.0.10.11"
 	type = string
@@ -61,6 +49,18 @@ variable "MachineType" {
 	}
 }
 
+variable "MarketplaceImageName" {
+	default = "ixia-virtual-test-appliance-11-00-0-634"
+	description = "Identifier for image"
+	type = string
+}
+
+variable "MarketplaceImageProjectId" {
+	default = "mpi-keysight-public"
+	description = "Globally unique identifier for image source project"
+	type = string
+}
+
 variable "NetworkTargetTags" {
 	default = [
 		"ixnetwork-agent"
@@ -108,7 +108,7 @@ variable "UserProjectTag" {
 }
 
 variable "Version" {
-	default = "10-40"
+	default = "11-00"
 	description = "Versioning of the application using the deployment"
 	type = string
 }

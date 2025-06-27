@@ -1,6 +1,4 @@
 locals {
-	CustomImageProjectId = var.CustomImageProjectId
-	CustomImageFamilyName = var.CustomImageFamilyName
 	Eth0PrivateIpAddress = var.Eth0PrivateIpAddress
 	Eth0PublicIpAddressName = "${local.Preamble}-eth0-ip-addr"
 	Eth0SubnetName = var.Eth0SubnetName
@@ -12,6 +10,8 @@ locals {
 	InstanceId = var.InstanceId
 	InstanceName = "${local.Preamble}-instance"
 	MachineType = var.MachineType
+	MarketplaceImageName = var.MarketplaceImageName
+	MarketplaceImageProjectId = var.MarketplaceImageProjectId
 	NetworkTargetTags = var.NetworkTargetTags
 	Preamble = replace("${local.UserLoginTag}-${local.UserProjectTag}-${local.Tag}-${local.Version}-${local.InstanceId}", "_", "-")
 	RegionName = var.RegionName
